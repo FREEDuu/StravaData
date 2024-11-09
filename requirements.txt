@@ -1,0 +1,5 @@
+numpy==1.21.5
+plotly==5.23.0
+python-dotenv==1.0.1
+Requests==2.32.3
+streamlit==1.37.1
