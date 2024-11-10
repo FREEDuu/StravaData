@@ -1,7 +1,10 @@
-
+from api import autorization
 from datetime import datetime, timedelta
 import json
 
+def autorize(client_id, client_secret):
+
+    auth_req = autorization(client_id, client_secret)
 
 def get_data_run(time_week_x):
 
