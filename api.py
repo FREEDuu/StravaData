@@ -41,5 +41,6 @@ def autorization(client_id, client_secret):
         headers=header
     )
 
-    
+
+get_activities()
 
