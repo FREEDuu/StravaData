@@ -4,11 +4,10 @@ from dotenv import load_dotenv
 import os
 
 
-def get_activities():
+def get_activities(access_token, code):
 
     load_dotenv()
     
-    access_token = os.getenv('ACCESS_TOKEN')
     pages = int( os.getenv('PAGES') )
     per_page = 200
 
@@ -21,26 +20,14 @@ def get_activities():
         )
 
         data_dumps.append(response.json())
-    
-    with open("data_runs.json", "w") as outfile:
 
+    with open(f"runs{code}.json", "w") as outfile:
         json.dump(data_dumps, outfile, indent=4)
         
-def autorization(client_id, client_secret):
+def autorization(client_id, client_secret, code):
 
-    header = {
-        'client_id' : client_id,
-        'client_secret' : client_secret,
-        'response_type' : 'code',
-        'scope' : 'activity:read_all',
-        'redirect_uri' : 'localhost'
-    }
-
-    response = requests.get(
-        url = f'http://www.strava.com/oauth/authorize?client_id={client_id}&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all',
-        headers=header
+    response = requests.post(
+        url = f'https://www.strava.com/oauth/token?client_id={client_id}&client_secret={client_secret}&code={code}&grant_type=authorization_code'
     )
 
-
-get_activities()
-
+    get_activities(response.json()['access_token'], code)

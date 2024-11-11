@@ -20,6 +20,8 @@ pip install -r requirements.txt
 ```
 ## Usage
 
+if you're not a developer, or you dont want to follow the STRAVA api , just follow the first page of instructions !!
+
 in the file .env change 
 
 ```env
@@ -27,17 +29,7 @@ ACCESS_TOKEN=YOUR_PERSONAL_ACCESS_TOKEN
 PAGES=4 #every page read max 200 runs, so with 4 you can read 800 activities
 YEARS=2 #how many years in the past you want to see 
 ```
-
-after change the .env file you need to populate your data_runs.json ( in the data_runs.json is just my runs for example, if you cant get your runs just rename data_runs_example.json in ---> data_runs.json and use my runs to see the results )
-
-in order to populate the data_runs.json you just need to call a python script with ( in the StravaData directory ) : 
-```bash
-python3 api.py
-```
-or
-```bash
-python api.py
-```
+When you click the 'Ottieni Dati' button, the script will generate a runs{code}.json that contains all your runs
 
 To get your personal access token, please refer to the official Strava Doc : https://developers.strava.com/
 

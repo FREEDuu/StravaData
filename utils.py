@@ -6,7 +6,7 @@ def autorize(client_id, client_secret):
 
     auth_req = autorization(client_id, client_secret)
 
-def get_data_run(time_week_x):
+def get_data_run(time_week_x, code):
 
     runs_dict = {}
     first_day =  time_week_x[0].split(' ')[0].replace('/', '-')
@@ -14,7 +14,7 @@ def get_data_run(time_week_x):
     for number_week_counter in range(len(time_week_x)):
         runs_dict[number_week_counter] = [0, 0, 0]
 
-    with open('data_runs.json') as json_run:
+    with open(f'runs{code}.json') as json_run:
 
         runs = json.load(json_run)
 
