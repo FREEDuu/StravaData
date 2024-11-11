@@ -42,7 +42,7 @@ and enjoy the charts :D
 
 this is the results of my runs ( in the last 4 years) :
 
-![img](https://github.com/user-attachments/assets/445c6882-9866-4db3-8b33-5e61f3ce1e54)
+![Screenshot from 2024-11-10 19-10-09](https://github.com/user-attachments/assets/064f5ea3-dc15-4ef3-be08-b2b6bd8e382f)
 
 ## Contributing
 
