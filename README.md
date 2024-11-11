@@ -21,7 +21,8 @@ pip install -r requirements.txt
 ## Usage
 
 if you're not a developer, or you dont want to follow the STRAVA api , just follow the first page of instructions !!
-![image](https://github.com/user-attachments/assets/6a3fca9d-9c45-4a9c-8706-9a79d8cfbe0a)
+
+![Screenshot from 2024-11-11 13-10-14](https://github.com/user-attachments/assets/e4df1c5f-9f1d-4572-93e9-bfec42c75f0d)
 
 
 in the file .env change 
