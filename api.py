@@ -2,13 +2,14 @@ import requests
 import json
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
 
 def get_activities(access_token, code):
 
     load_dotenv()
     
-    pages = int( os.getenv('PAGES') )
+    pages = int( st.secrets['PAGES'] )
     per_page = 200
 
     data_dumps = []

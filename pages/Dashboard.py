@@ -2,10 +2,7 @@ import streamlit as st
 from utils import get_weeks, get_data_run, autorize
 import numpy
 import plotly.graph_objs as go
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 st.set_page_config(layout="wide")
 
@@ -14,7 +11,7 @@ st.title('STRAVA DATA')
 title = st.text_input("Incolla il Codice", "")
 if st.button("Ottieni Dati (re-inserisci il codice di prima)", use_container_width=True):
     
-    date_time, time_week_x = get_weeks( int((os.getenv('YEARS'))) )
+    date_time, time_week_x = get_weeks( int((st.secrets['YEARS'])) )
     data_run, km, min, gain = get_data_run(time_week_x, title)
 
     fig_distance = go.Figure()

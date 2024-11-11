@@ -5,15 +5,13 @@ import plotly.graph_objs as go
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
 st.set_page_config(layout="wide")
 
 st.title('Segui le istruzioni')
 st.write('STEP 1 --> ottieni il codice di accesso')
 
-CLIENT_ID = ( os.getenv('CLIENT_ID') )
-CLIENT_SECRET = ( os.getenv('CLIENT_SECRET') )
+CLIENT_ID = ( st.secrets['CLIENT_ID'] )
+CLIENT_SECRET = ( st.secrets['CLIENT_SECRET'] )
 link = f'http://www.strava.com/oauth/authorize?client_id={CLIENT_ID}<&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all'
 
 st.write('visita la pagina ( da browser ) e clicca su AUTORIZZA .... non chiuderla dopo aver autorizzato !')
