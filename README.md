@@ -21,6 +21,8 @@ pip install -r requirements.txt
 ## Usage
 
 if you're not a developer, or you dont want to follow the STRAVA api , just follow the first page of instructions !!
+![image](https://github.com/user-attachments/assets/6a3fca9d-9c45-4a9c-8706-9a79d8cfbe0a)
+
 
 in the file .env change 
 
@@ -42,7 +44,9 @@ and enjoy the charts :D
 
 this is the results of my runs ( in the last 4 years) :
 
-![Screenshot from 2024-11-10 19-10-09](https://github.com/user-attachments/assets/064f5ea3-dc15-4ef3-be08-b2b6bd8e382f)
+![Screenshot from 2024-11-11 13-10-44](https://github.com/user-attachments/assets/facd3d8d-09c2-4412-82ac-04895ba77fe3)
+
+
 
 ## Contributing
 
